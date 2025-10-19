@@ -132,17 +132,5 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return questions.map((q) => {
-        if (q.id === targetId) {
-            const newOptions = [...q.options];
-            if (targetOptionIndex === -1) {
-                //add new option
-                newOptions.push(newOption);
-            } else {
-                newOptions[targetOptionIndex] = newOption; // or replace
-            }
-            return { ...q, options: newOptions };
-        }
-        return q;
-    });
+    return [];
 }
